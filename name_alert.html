@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+		<center>
+							<form action="" method="post">
+								<input type="text" name="name" id="name">
+								<button type="submit" value="submit" onclick="call()">Submit</button>
+							</form>
+		</center>
+</body>
+</html>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+<script>
+	
+	//console.log(name);
+	//always take a variable within function
+	function call()
+	{
+		var name = $('#name').val();
+		alert("Your given input is"+" "+name);
+	}
+</script>

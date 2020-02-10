@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+	<style>
+		.flash {
+			color: green;
+			width: 100px;
+			height: 5px;
+		}
+	</style>
+<center>
+
+	<div class="flash" id="flash">
+	     <span class="badge badge-success" id="flash"></span>
+	</div>
+
+	<div class="form">
+	<form>
+		<input type="text" name="" id="number">
+		<button type="submit" onclick="submit()">Submit</button>
+	</form>
+	</div>
+</center>
+</body>
+</html>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+<script>
+	function submit()
+	{
+		alert('ok');
+		var number = $('#number').val();
+
+		if(number=!""){
+			$('#flash').show();
+			$('#flash').text('Thanks for submit');
+		}	//else{
+			//	$('#flash').hide();
+			//}
+	}
+</script>

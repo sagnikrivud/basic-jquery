@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+	<center>
+		<div class="alert">
+			<span id="#notice" class="badge badge-success"></span>
+		</div>
+
+		<div class="form">
+		<input type="date" name="" id="date1">
+		<input type="date" name="" id="date2">
+		<button type="submit" onclick="datePicker()">Submit</button>
+		</div>
+	</center>
+
+</body>
+</html>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+<script>
+	function datePicker()
+	{
+		//alert('ok');
+		var date1 = $('#date1').val();
+		var date1 = date1.split("-");
+		var date1 = date1[1]+"/"+date1[0]+"/"+date1[2];
+		var date1 = new Date(date1).getTime(); // convert to timestamp for date 1 
+		// -------------------------------------------------------------
+
+		var date2 = $('#date2').val();
+		var date2 = date2.split("-");
+		var date2 = date2[1]+"/"+date2[0]+"/"+date2[2];
+		var date2 = new Date(date2).getTime(); // convert to timestamp for date 2
+
+		var count = (date2-date1);
+
+		$('#notice').show();
+		$('#notice').text(count);
+
+	}
+</script>
